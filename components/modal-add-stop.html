@@ -1,0 +1,23 @@
+<div id="modal-add-stop-el" class="modal" style="display:none;">
+    <div class="modal-content glass-panel">
+        <span class="close" onclick="closeModal('modal-add-stop-el')">&times;</span>
+        <h2>Add City / Stop</h2>
+        <form id="add-stop-form">
+            <div class="input-group">
+                <label>City</label>
+                <input type="text" id="stop-city" placeholder="Search city..." required>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Arrival</label>
+                    <input type="date" id="stop-arrival" required>
+                </div>
+                <div class="input-group">
+                    <label>Departure</label>
+                    <input type="date" id="stop-departure" required>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary w-100">Add Stop</button>
+        </form>
+    </div>
+</div>

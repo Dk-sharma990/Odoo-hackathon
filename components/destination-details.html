@@ -1,0 +1,19 @@
+<header class="view-header flex-between">
+    <button class="btn-back" onclick="navigateTo('city-search')"><i class="fa-solid fa-arrow-left"></i></button>
+</header>
+
+<div class="destination-hero" id="dest-hero" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1920&q=80')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="giant-text" id="dest-title">Destination Name</h1>
+        <p class="hero-subtitle" id="dest-desc">Beautiful description goes here.</p>
+        <button class="btn-primary" onclick="navigateTo('create-trip')"><i class="fa-solid fa-plus"></i> Plan Trip Here</button>
+    </div>
+</div>
+
+<div class="destination-insights" style="max-width: 1400px; margin: 3rem auto; padding: 0 5%;">
+    <h2 class="mb-3 text-secondary">Famous Places to Visit</h2>
+    <div class="cards-grid" id="dest-places">
+        <!-- Places injected dynamically -->
+    </div>
+</div>

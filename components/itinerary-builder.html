@@ -1,0 +1,28 @@
+<header class="view-header flex-between">
+    <div>
+        <button class="btn-back" onclick="navigateTo('my-trips')"><i class="fa-solid fa-arrow-left"></i></button>
+        <h1 id="builder-trip-name">Trip Name</h1>
+    </div>
+    <div class="trip-actions">
+        <button class="btn-secondary btn-small" onclick="viewTripBudget()"><i class="fa-solid fa-wallet"></i> Budget</button>
+        <button class="btn-secondary btn-small" onclick="viewChecklist()"><i class="fa-solid fa-list-check"></i> Checklist</button>
+        <button class="btn-secondary btn-small" onclick="viewNotes()"><i class="fa-solid fa-note-sticky"></i> Notes</button>
+        <button class="btn-primary btn-small" onclick="viewItinerary()"><i class="fa-solid fa-eye"></i> View Itinerary</button>
+    </div>
+</header>
+<div class="builder-layout">
+    <div class="stops-panel glass-panel">
+        <div class="panel-header flex-between">
+            <h2>Cities / Stops</h2>
+            <button class="btn-text" onclick="showAddStopModal()"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+        <ul id="stops-list" class="sortable-list">
+            <!-- Stops injected here -->
+        </ul>
+    </div>
+    <div class="activities-panel glass-panel">
+        <div id="selected-stop-details">
+            <p class="text-muted">Select a stop to add activities.</p>
+        </div>
+    </div>
+</div>

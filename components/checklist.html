@@ -1,0 +1,17 @@
+<header class="view-header flex-between">
+    <button class="btn-back" onclick="navigateTo('itinerary-builder')"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1>Packing Checklist</h1>
+</header>
+<div class="checklist-container glass-panel">
+    <form id="add-checklist-form" class="flex-row">
+        <input type="text" id="new-item-name" placeholder="Add new item..." required>
+        <select id="new-item-category">
+            <option value="Clothing">Clothing</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Documents">Documents</option>
+            <option value="Misc">Misc</option>
+        </select>
+        <button type="submit" class="btn-primary">Add</button>
+    </form>
+    <div id="checklist-items"></div>
+</div>

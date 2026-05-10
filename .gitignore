@@ -1,0 +1,5 @@
+node_modules/
+traveloop.db
+.env
+.DS_Store
+*.log

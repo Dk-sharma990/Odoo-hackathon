@@ -1,0 +1,16 @@
+<header class="view-header flex-between">
+    <button class="btn-back" onclick="navigateTo('my-trips')"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1>Budget & Cost Breakdown</h1>
+</header>
+<div class="budget-dashboard" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    <div class="budget-summary glass-panel">
+        <h2>Total Estimated Cost</h2>
+        <h1 id="total-budget" class="text-gradient" style="font-size: 3rem;">0</h1>
+    </div>
+    <div class="budget-breakdown glass-panel">
+        <h3>Selected Places & Costs</h3>
+        <div id="budget-items-container" class="mt-2">
+            <!-- Items injected here -->
+        </div>
+    </div>
+</div>

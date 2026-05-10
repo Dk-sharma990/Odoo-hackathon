@@ -1,0 +1,63 @@
+<header class="view-header">
+    <h1>Book Your Travel</h1>
+    <p class="text-muted mt-2">Find the best deals on flights, trains, buses, and hotels all in one place.</p>
+</header>
+
+<div class="booking-container">
+    <div class="booking-tabs flex-row mb-3">
+        <button class="btn-primary tab-btn" onclick="switchBookingTab('flights')"><i class="fa-solid fa-plane"></i> Flights</button>
+        <button class="btn-secondary tab-btn" onclick="switchBookingTab('trains')"><i class="fa-solid fa-train"></i> Trains</button>
+        <button class="btn-secondary tab-btn" onclick="switchBookingTab('buses')"><i class="fa-solid fa-bus"></i> Buses</button>
+        <button class="btn-secondary tab-btn" onclick="switchBookingTab('hotels')"><i class="fa-solid fa-hotel"></i> Hotels</button>
+    </div>
+
+    <div class="glass-panel">
+        <form id="booking-search-form">
+            <h2 id="booking-form-title" class="mb-3 text-primary"><i class="fa-solid fa-plane"></i> Search Flights</h2>
+            
+            <div class="input-row">
+                <div class="input-group" id="from-group">
+                    <label>From</label>
+                    <input type="text" placeholder="Origin City or Airport" required>
+                </div>
+                <div class="input-group" id="to-group">
+                    <label id="to-label">To</label>
+                    <input type="text" id="to-input" placeholder="Destination City or Airport" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Departure Date</label>
+                    <input type="date" required>
+                </div>
+                <div class="input-group" id="return-date-group">
+                    <label>Return Date (Optional)</label>
+                    <input type="date">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Passengers / Guests</label>
+                    <select>
+                        <option>1 Adult</option>
+                        <option>2 Adults</option>
+                        <option>2 Adults, 1 Child</option>
+                        <option>Group (4+)</option>
+                    </select>
+                </div>
+                <div class="input-group" id="class-group">
+                    <label>Class</label>
+                    <select>
+                        <option>Economy</option>
+                        <option>Business</option>
+                        <option>First Class</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" class="btn-primary w-100 mt-2" onclick="alert('Searching for best options...')">Search Options</button>
+        </form>
+    </div>
+</div>

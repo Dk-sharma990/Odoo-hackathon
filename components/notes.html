@@ -1,0 +1,11 @@
+<header class="view-header flex-between">
+    <button class="btn-back" onclick="navigateTo('itinerary-builder')"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1>Trip Notes</h1>
+</header>
+<div class="notes-container">
+    <div class="add-note glass-panel">
+        <textarea id="new-note-text" rows="3" placeholder="Write a note, reminder, or check-in info..."></textarea>
+        <button class="btn-primary mt-2" onclick="saveNote()">Save Note</button>
+    </div>
+    <div id="notes-list"></div>
+</div>

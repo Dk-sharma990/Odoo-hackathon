@@ -1,0 +1,45 @@
+<header class="view-header">
+    <h1>Create a New Trip</h1>
+</header>
+<form id="create-trip-form" class="form-container glass-panel">
+    <div class="input-group">
+        <label>Trip Type</label>
+        <div class="trip-type-toggle">
+            <label class="radio-label">
+                <input type="radio" name="trip-type" value="individual" checked onclick="document.getElementById('group-invites').style.display='none'">
+                <span><i class="fa-solid fa-user"></i> Individual</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="trip-type" value="group" onclick="document.getElementById('group-invites').style.display='block'">
+                <span><i class="fa-solid fa-users"></i> Group</span>
+            </label>
+        </div>
+    </div>
+    
+    <div class="input-group">
+        <label>Trip Name</label>
+        <input type="text" id="trip-name" placeholder="E.g., Euro Tour 2026" required>
+    </div>
+    
+    <div class="input-group" id="group-invites" style="display:none; background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+        <label>Invite Friends (Group Trip)</label>
+        <p class="text-small text-muted mb-3">Add emails separated by commas. They will receive an invite to collaborate.</p>
+        <input type="text" id="group-emails" placeholder="friend1@example.com, friend2@example.com">
+    </div>
+
+    <div class="input-row">
+        <div class="input-group">
+            <label>Start Date</label>
+            <input type="date" id="trip-start" required>
+        </div>
+        <div class="input-group">
+            <label>End Date</label>
+            <input type="date" id="trip-end" required>
+        </div>
+    </div>
+    <div class="input-group">
+        <label>Description</label>
+        <textarea id="trip-desc" rows="3" placeholder="What's the purpose of this trip?"></textarea>
+    </div>
+    <button type="submit" class="btn-primary">Save & Continue</button>
+</form>
