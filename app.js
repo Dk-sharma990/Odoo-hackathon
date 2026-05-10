@@ -1,57 +1,59 @@
-let currentUser = null;
+// FRONTEND LOGIN + SIGNUP FOR GITHUB PAGES
 
-    if (
-        url.includes('/trips') &&
-        (!options || options.method === 'GET')
-    ) {
+try {
 
-        const trips = JSON.parse(
-            localStorage.getItem('traveloopTrips')
-        ) || [];
+    // SIGNUP
+    if (authMode === 'signup') {
 
-        return {
-            ok: true,
-            async json() {
-                return trips;
-            }
+        const userData = {
+            id: Date.now(),
+            name: name,
+            email: email,
+            password: password
         };
+
+        localStorage.setItem(
+            'traveloopUser',
+            JSON.stringify(userData)
+        );
+
+        currentUser = userData;
+
+        alert('Signup Successful');
+
+        navigateTo('dashboard');
     }
 
-    // =========================
-    // TRIP PLACES
-    // =========================
+    // LOGIN
+    else {
 
-    if (url.includes('/trip-places')) {
+        const savedUser = JSON.parse(
+            localStorage.getItem('traveloopUser')
+        );
 
-        return {
-            ok: true,
-            async json() {
-                return [];
-            }
-        };
-    }
+        if (
+            savedUser &&
+            savedUser.email === email &&
+            savedUser.password === password
+        ) {
 
-    // =========================
-    // DEFAULT
-    // =========================
+            currentUser = savedUser;
 
-    return {
-        ok: true,
+            alert('Login Successful');
 
-        async json() {
-            return [];
-        },
+            navigateTo('dashboard');
 
-        async text() {
-            return '';
+        } else {
+
+            alert('Invalid Email or Password');
+
         }
-    };
-};
+    }
 
-// =========================
-// APP START
-// =========================
+} catch (err) {
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Traveloop Started Successfully');
-});
+    console.error(err);
+
+    alert('Login Failed');
+
+}
